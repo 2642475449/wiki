@@ -2,9 +2,8 @@ package com.xiao.wiki.mapper;
 
 import com.xiao.wiki.domain.Ebook;
 import com.xiao.wiki.domain.EbookExample;
-import org.apache.ibatis.annotations.Param;
-
 import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
 public interface EbookMapper {
     long countByExample(EbookExample example);

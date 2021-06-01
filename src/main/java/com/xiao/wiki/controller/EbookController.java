@@ -1,7 +1,7 @@
 package com.xiao.wiki.controller;
 
-import com.xiao.wiki.domain.Ebook;
 import com.xiao.wiki.resp.CommonResp;
+import com.xiao.wiki.resp.EbookResp;
 import com.xiao.wiki.service.EbookService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,9 +25,9 @@ public class EbookController {
 
 
     @GetMapping("/list")
-    public CommonResp list() {
-        CommonResp<List<Ebook>> resp = new CommonResp<>();
-        List<Ebook> list = ebookService.list();
+    public CommonResp list(EbookResp req) {
+        CommonResp<List<EbookResp>> resp = new CommonResp<>();
+        List<EbookResp> list = ebookService.list(req);
         resp.setContent(list);
         return  resp;
     }
