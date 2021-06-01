@@ -2,8 +2,9 @@ package com.xiao.wiki.mapper;
 
 import com.xiao.wiki.domain.Demo;
 import com.xiao.wiki.domain.DemoExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface DemoMapper {
     long countByExample(DemoExample example);
